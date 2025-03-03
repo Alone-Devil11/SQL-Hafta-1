@@ -1,0 +1,50 @@
+SQL 1. Hafta Ödevi
+-------------------------
+
+a)
+
+SELECT FirstName, LastName, Salary 
+FROM employees;
+
+# İstediğim kolon bilgilerinin isimlerini tek tek yazarak ve FROM komutuyla da hangi tablodan olduğunu belirterek çağırdım. #
+
+***********************************************************************************************
+b)
+
+SELECT DISTINCT departmentid
+FROM employees;
+
+# Departman isminin tekrarını DISTINCT komutuyla önleyerek tabloyu getirdim. #
+
+***********************************************************************************************
+c)
+
+SELECT * FROM employees
+WHERE departmentid = '1';
+
+# WHERE komutuyla yer bildirip, department tablosunda IT'ye karşılık gelen sayıyı yazarak sadece IT departmanında olan çalışanların bilgilerini getirdim. #
+
+
+***********************************************************************************************
+d)
+
+SELECT * FROM employees
+ORDER BY salary DESC;
+
+# Bu kod maaşları büyükten küçüğe sıralarken tüm tabloyu da beraberinde gösterir. #
+# ORDER BY 'ı belirli bir sıralama düzenine göre düzenlemek, DESC'i  ise büyükten küçüğe sıralamak için kullandım. #
+
+SELECT salary 
+FROM employees
+ORDER BY salary DESC;
+
+# Bu kod ise maaşları büyükten küçüğe sıralarken sadece maaş sütununu ekrana getirir. #
+# Burada maaşı SELECT komutuyla seçerek sadece o kolonun gelemsini sağladım. #
+
+***********************************************************************************************
+e)
+
+SELECT firstname || ' ' || lastname
+FROM employees
+
+# Bu kodla iki sütunu birleştirerek tek bir sütun haline getirdim. İsimlerin arasında boşluk kalması için ise  ' ' işaretini koydum. #
